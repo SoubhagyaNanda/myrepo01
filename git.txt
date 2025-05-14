@@ -118,3 +118,8 @@ git log --until="yyyy-mm-dd"
 git log --author="authorName"
     ~ It is used to search a specific person commits.
     ~ git log --author="soubhagya"
+
+git branch -M main
+    ~ Before pushing files to repo we are saving files in local repo master.
+    ~ When we used this command. Now we are moving master branch to main branch.
+
