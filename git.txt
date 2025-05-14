@@ -1,0 +1,120 @@
+git init
+    ~ It is used to create empty repo in local machine.
+
+What are the commands used to create global ID?
+    ~ git config user.name 'yourName'
+    ~ git confing user.email 'yourMail'
+
+
+# Status command
+git status ( Command used to check status of your file system. It is commited or not.)
+
+
+#add command
+git add * or git add . ( Used to upload your files on local repo)
+git add 'specific file' (used to upload single file on local repo)
+
+
+# Commit command
+git commit -m 'your message' (used to save your files on repo.)
+
+
+# Branch command
+git branch (Used to check your current branch)
+
+
+# Log command
+git log (Used to check weather the commit was implemented or not and Implemented by whom)
+
+# Diff command
+git diff (used to check what are the difference between previous file and current file changes.)
+
+
+# Show command
+git show previous-commit ID:file path (Used to check previous commits of a file.)
+example==> First do git log from git log you will get previous commit id.
+           - Then git show commit id:file path
+           - git show 5d2a97894cdecdf545ba102fd614467967f4af7a:index.html (Here i gave direct file name but you can give that file path.)
+
+
+        # Checkout command
+git checkout previous-commit ID -- * or filename (Used to check the previous file)
+example==> First go git log from git log you will get previous commit id.
+           - Then git checkout previous-id -- index.html
+           - git checkout 5d2a97894cdecdf545ba102fd614467967f4af7a:index.html (Here i gave direct file name but you can give that file path.)
+
+Difference between git show and git checkout?
+    - git show will open the previous commit on the terminal itself. It's hard to read a file in terminal.
+    - git checkout will open the file on your virtual machine itself.
+
+git checkout branch-name -- * or file name (After checking previous files this command will take you to current file)
+    git checkout master -- *
+
+git diff --cached (It is also used to check the what are the changes you have done in file.)
+
+
+        # Restore command
+git restore file_name or git restore .
+    ~ File name used for single file and . used for multiple file.
+    ~ If you have done any mistake in the file and want to return previous form of that file.
+    ~ In that case we used git restore command.
+
+git restore --staged . or git restore file_path
+    ~ If you have done mistake and already saved it in you local repo.
+    ~ To restore it we used git restore --staged . command to change the file from staging directory to working directory.
+    ~ Then do git restore . or specific file path. It will return to its previous form.
+
+git restore --worktree . or git restore --worktree file_path
+
+
+        # Reset command
+git reset --soft HEAD^ or git reset --hard HEAD^
+    ~ If you have done any commit by mistake then reset command used to uncommit that current commit and it will take you to previous commit.
+    ~ There two commands to do it. soft and hard.
+        ~ soft will take you to previous commit. But the changes you have written that will not change.
+        ~ hard also take you to the previous commit and it will erase all the current data and you can see the previous commited data only.
+
+
+        # Log command advance.
+git log -p -1 [p means patch]
+    ~ This command is also used to check last commit with the difference between previous commit and last commit.
+    ~ p meaning patch and -1 means last commit and difference you can increase it accordingly.
+
+
+git log --stat
+    ~ This command is used to check the summary of all the commits.
+    ~ Summary like what are the changes have been done in a file addition of any line or deletion.
+
+
+git log --pretty=oneline
+    ~ This command will show us customized previous commits.
+    ~ Example -- 7bb3d0e8cc46c052e32f1178f447d781bcfb5a4f (HEAD -> master) all commited
+                 7f366cb1600b00bf2ead7a266b28e97e4ef81160 Version 4 commit
+                 adeff5f35bea87d0addc63227887ea87c31eb923 special notes commited
+                 f2b3dd2790fac0535fdee8324e6854064adc12bd third commit
+
+
+git log --pretty=format:"%h -%an, %ar:%s"
+    ~ %h means hash commit number.
+    ~ %an means author name.
+    ~ %ar:%s means commit message.
+
+
+git log -S "function name"
+    ~ This is used to show us the information about a code line.
+    ~ example -  Author: Soubhagya Nanda <soubhagyananda1205@gmail.com>
+                 Date:   Sun May 11 10:00:43 2025 +0530
+                 This the second commit
+
+
+git log --grep="search commit message"
+    ~ It will search from the commit message.
+
+git log --since="yyyy-mm-dd"
+git log --until="yyyy-mm-dd"
+    ~ It is used to search from a specific date.
+
+
+git log --author="authorName"
+    ~ It is used to search a specific person commits.
+    ~ git log --author="soubhagya"
