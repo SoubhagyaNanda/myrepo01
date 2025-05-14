@@ -119,7 +119,36 @@ git log --author="authorName"
     ~ It is used to search a specific person commits.
     ~ git log --author="soubhagya"
 
+
 git branch -M main
     ~ Before pushing files to repo we are saving files in local repo master.
     ~ When we used this command. Now we are moving master branch to main branch.
+
+
+git push
+    ~ After pushing for the 1st time. When we do changes with your code. And you want to push it again.
+    ~ Then this command is used to push your changes file to the remote repo.
+
+
+        # Git Pull
+git pull
+    ~ When you created any file in remote repo.
+    ~ This command is used to get that file from remote repo to local repo.
+
+git clone
+    ~ If you want to use someone else remote repo. Then this command is used to download your remote repo.
+    ~ Create an empty directory.
+    ~ Go to his repo.
+    ~ Then click on the code button.
+    ~ Copy the link on your repo.
+    ~ used your git bash or any git options.
+    ~ git clone "past the link here"
+    ~ It will download all the files from his repo previous commits history and all.
+
+
+git branch
+    ~ This command is used to create new branch like main.
+    ~ git branch branchName
+    ~ git checkout branchName # It will switch to other branch.
+
 
