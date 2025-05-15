@@ -156,3 +156,7 @@ git merge
     ~ This command is used to merge your branch with main branch.
     ~ To merger both branches first you have to be in your main branch.
     ~ Then run this command git merger branch
+
+
+        # Git forking
+
