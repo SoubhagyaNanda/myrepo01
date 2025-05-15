@@ -160,3 +160,16 @@ git merge
 
         # Git forking
 
+git clean -n
+    ~ This command will tell you your untracked file names.
+git clean -f
+    ~ This command is used to permanently clean your untracked files.
+
+
+        # Git tags
+git tag -a tagName -m "this is tagname"
+    ~ This command is used to give a tag name to every commit ID's.
+
+git push origin --tags
+    ~ This command is used to push our local tags to remote repo.
+
